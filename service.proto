@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service MyService {
+  rpc StreamData(Request) returns (stream Response);
+}
+
+message Request {
+  string query = 1;
+}
+
+message Response {
+  float usd_chf = 1;
+  float eur_usd = 2;
+  float chf_eur = 3;
+}
